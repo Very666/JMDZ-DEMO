@@ -1,6 +1,6 @@
 server:
- port: 8702
-foo: foo version 12
+ port: 8701
+foo: foo version 66
 
 spring:
   rabbitmq:
