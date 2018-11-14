@@ -1,10 +1,8 @@
 server:
  port: 8702
-foo: foo version 66
+foo: foo version 12
 
 spring:
-  application:
-    name: config-client-git
   rabbitmq:
     host: 127.0.0.1
     port: 5672
