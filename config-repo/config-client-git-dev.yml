@@ -1,6 +1,6 @@
 server:
  port: 9001
-foo: foo version 666
+foo: foo version 777
 
 spring:
   application:
