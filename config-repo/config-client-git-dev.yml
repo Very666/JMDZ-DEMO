@@ -1,11 +1,27 @@
 server:
- port: 8702
+ port: 9001
 foo: foo version 123456
 
 spring:
+  application:
+    name: config-client
   rabbitmq:
     host: 127.0.0.1
     port: 5672
     username: guest
     password: guest
     virtual-host: /
+  cloud:
+    bus:
+      # 开启总线
+      enabled: true
+      # 开启跟踪
+      trace:
+        enabled: true
+
+management:
+ # 暴露端点
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
