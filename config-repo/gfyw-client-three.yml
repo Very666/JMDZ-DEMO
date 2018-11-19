@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: client-three
+server:
+  port: 8093
+feign:
+  hystrix:
+    enabled: true
