@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: client-one
+server:
+  port: 8091
+feign:
+  hystrix:
+    enabled: true
