@@ -10,4 +10,5 @@ management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh,hystrix.stream
+        #\u66B4\u9732\u7AEF\u70B9
+        include: hystrix.stream,bus-refresh

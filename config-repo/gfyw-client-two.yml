@@ -6,3 +6,9 @@ server:
 feign:
   hystrix:
     enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        #\u66B4\u9732\u7AEF\u70B9
+        include: hystrix.stream,bus-refresh

@@ -7,13 +7,9 @@ server:
 mybatis:
   #\u5B9E\u4F53\u7C7B
   type-aliases-package: com.gfyw.example.bean
-#\u5F00\u542F\u7194\u65AD\u914D\u7F6E
-feign:
-  hystrix:
-    enabled: true
 management:
   endpoints:
     web:
       exposure:
         #\u66B4\u9732\u7AEF\u70B9
-        include: hystrix.stream,bus-refresh
+        include: bus-refresh
