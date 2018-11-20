@@ -3,7 +3,6 @@ server:
 spring:
   application:
     name: zuul
-# 注册到euerka
 eureka:
   instance:
     #本地路由访问
@@ -14,7 +13,7 @@ zuul:
   # 开启重试
   retryable: true
   # 重定向
-  #add-host-header: true
+  add-host-header: true
   # 开启zuul饥饿加载
   ribbon:
     eager-load:
@@ -22,7 +21,7 @@ zuul:
   # 忽略所有路由
   #ignored-services: "*"
   # 关闭默认代理前缀
-  #strip-prefix: false
+  strip-prefix: false
 ribbon:
   #ribbon.eager-load.enabled：开启Ribbon的饥饿加载模式
   #ribbon.eager-load.clients：指定需要饥饿加载的客户端名称、服务名
