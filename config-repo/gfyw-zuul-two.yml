@@ -1,0 +1,37 @@
+server:
+  port: 12002
+spring:
+  application:
+    name: zuul
+# 注册到euerka
+eureka:
+  instance:
+    #本地路由访问
+    prefer-ip-address: true
+zuul:
+  # 统一路径前缀
+  prefix: /gfyw
+  # 开启重试
+  retryable: true
+  # 重定向
+  #add-host-header: true
+  # 开启zuul饥饿加载
+  ribbon:
+    eager-load:
+      enabled: true
+  # 忽略所有路由
+  #ignored-services: "*"
+  # 关闭默认代理前缀
+  #strip-prefix: false
+ribbon:
+  #ribbon.eager-load.enabled：开启Ribbon的饥饿加载模式
+  #ribbon.eager-load.clients：指定需要饥饿加载的客户端名称、服务名
+  # 连接超时一秒
+  ConnectTimeout: 1000
+  # 请求处理时间两秒
+  ReadTimeout: 2000
+  # 同一个server尝试重连次数(除去首次)
+  MaxAutoRetries: 1
+  # 切换相同server重连次数
+  MaxAutoRetriesNextServer: 1
+
