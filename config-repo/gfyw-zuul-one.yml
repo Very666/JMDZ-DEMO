@@ -17,7 +17,7 @@ zuul:
   # 忽略所有路由
   #ignored-services: "*"
   # 关闭默认代理前缀
-  #strip-prefix: false
+  strip-prefix: false
 ribbon:
   #ribbon.eager-load.enabled：开启Ribbon的饥饿加载模式
   #ribbon.eager-load.clients：指定需要饥饿加载的客户端名称、服务名
