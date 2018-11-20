@@ -9,7 +9,7 @@ zuul:
   # 开启重试
   retryable: true
   # 重定向
-  #add-host-header: true
+  add-host-header: true
   # 开启zuul饥饿加载
   ribbon:
     eager-load:
