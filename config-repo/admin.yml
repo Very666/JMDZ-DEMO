@@ -1,0 +1,38 @@
+#这是admin的配置文件,复制了一份出来方便查看,和配置中心没有关系
+server:
+  port: 13001
+spring:
+  application:
+    name: admin-server
+  #设置登录信息
+  security:
+    user:
+      name: "admin"
+      password: "admin"
+eureka:
+  client:
+    #eureka client间隔多久去拉取服务注册信息
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://eureka-one:10001/eureka/,http://eureka-two:10002/eureka/,http://eureka-three:10003/eureka/
+  instance:
+    #等待心跳超时时间
+    lease-renewal-interval-in-seconds: 10
+    #健康监控路径
+    health-check-url-path: /actuator/health
+    #元数据
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
+management:
+  #端点
+  endpoints:
+    web:
+      #暴露
+      exposure:
+        include: "*"
+  endpoint:
+    #健康情况
+    health:
+      #详细程度
+      show-details: always
