@@ -11,4 +11,7 @@ management:
     web:
       exposure:
         #\u66B4\u9732\u7AEF\u70B9
-        include: bus-refresh
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
